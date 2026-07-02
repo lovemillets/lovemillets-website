@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Millets | Premium, Nutritious & Ancient Grain Foods</title>
-    <meta name="description" content="Savor the goodness of ancient grains. Love Millets brings you premium, gluten-free, and nutrient-rich millet flours, whole grains, and ready-to-cook mixes.">
+    <title>Love Millets | Honest Ancient Grain Foods | Zero Junk</title>
+    <meta name="description" content="Inspired by radical honesty and ancient nutrition. Love Millets brings you premium, gluten-free, and nutrient-rich millet flours, whole grains, and ready-to-cook mixes with absolute transparency.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS Play CDN (perfect for static deployment & portability) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,29 +19,29 @@
                 extend: {
                     colors: {
                         brand: {
-                            50: '#fcfbf7',
-                            100: '#f5f2e6',
-                            200: '#ebdcb9',
-                            300: '#dfc285',
-                            400: '#d1a454',
-                            500: '#be8331', // Warm Millet Gold
-                            600: '#9d6325',
-                            700: '#7d471e',
-                            800: '#5c3318',
-                            900: '#3e1e10',
+                            50: '#FAF8F0',  // Milk / Oatmeal White
+                            100: '#F3ECD8',  // Soft Wheat
+                            200: '#E5D5B3',  // Sandy Grains
+                            300: '#D5BE8E',
+                            400: '#C2A169',
+                            500: '#A38048',  // Warm Millet Gold
+                            600: '#826233',
+                            700: '#614722',
+                            800: '#402E14',
+                            900: '#211B07',
                         },
                         forest: {
-                            50: '#f2f7f4',
-                            100: '#e1ede6',
-                            500: '#2c5e43', // Warm Forest Green
-                            600: '#224d33',
-                            700: '#1a3c26',
-                            800: '#132c1b',
+                            50: '#F2F6F3',
+                            100: '#E1EDE6',
+                            500: '#1B4D3E',  // Deep Forest Green (Very high-end premium)
+                            600: '#143D31',
+                            700: '#0E2E24',
+                            800: '#071F17',
                         }
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
                     }
                 }
             }
@@ -52,11 +52,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Custom smooth scroll behaviors & animations */
         .glassmorphism {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(250, 248, 240, 0.85);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
+        }
+        /* Custom card scale transition */
+        .hover-card-trigger {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .hover-card-trigger:hover {
+            transform: translateY(-6px);
         }
     </style>
 </head>
@@ -67,29 +73,29 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
-                <div class="flex items-center gap-2">
-                    <div class="w-10 h-10 bg-forest-500 rounded-full flex items-center justify-center text-white text-lg shadow-md">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-10 h-10 bg-forest-500 rounded-xl flex items-center justify-center text-brand-100 text-lg shadow-md">
                         <i class="fa-solid fa-wheat-awn"></i>
                     </div>
                     <div>
                         <span class="font-serif text-2xl font-bold tracking-tight text-forest-700">Love Millets</span>
-                        <p class="text-[9px] uppercase tracking-widest font-semibold text-brand-500 -mt-1">Ancient Grains, Modern Life</p>
+                        <p class="text-[9px] uppercase tracking-widest font-bold text-brand-500 -mt-1">Honest Grains. Zero Junk.</p>
                     </div>
                 </div>
 
                 <!-- Desktop Nav -->
-                <nav class="hidden md:flex items-center gap-8">
-                    <a href="#home" class="text-stone-600 hover:text-forest-500 font-medium transition-colors">Home</a>
-                    <a href="#benefits" class="text-stone-600 hover:text-forest-500 font-medium transition-colors">Why Millets?</a>
-                    <a href="#products" class="text-stone-600 hover:text-forest-500 font-medium transition-colors">Our Products</a>
-                    <a href="#story" class="text-stone-600 hover:text-forest-500 font-medium transition-colors">Our Story</a>
-                    <a href="#contact" class="text-stone-600 hover:text-forest-500 font-medium transition-colors">Contact</a>
+                <nav class="hidden md:flex items-center gap-8 text-sm">
+                    <a href="#home" class="text-stone-600 hover:text-forest-500 font-semibold transition-colors">Home</a>
+                    <a href="#truth" class="text-stone-600 hover:text-forest-500 font-semibold transition-colors">The Honest Truth</a>
+                    <a href="#explorer" class="text-stone-600 hover:text-forest-500 font-semibold transition-colors">Millet Explorer</a>
+                    <a href="#products" class="text-stone-600 hover:text-forest-500 font-semibold transition-colors">Future Range</a>
+                    <a href="#story" class="text-stone-600 hover:text-forest-500 font-semibold transition-colors">Our Story</a>
                 </nav>
 
                 <!-- Desktop CTA -->
                 <div class="hidden md:block">
-                    <a href="#products" class="bg-forest-500 hover:bg-forest-600 text-white px-5 py-2.5 rounded-full font-semibold transition-all shadow-sm hover:shadow-md flex items-center gap-2">
-                        <span>Explore Products</span>
+                    <a href="#contact" class="bg-forest-500 hover:bg-forest-600 text-brand-50 px-6 py-2.5 rounded-xl font-bold text-sm transition-all shadow hover:shadow-md flex items-center gap-2">
+                        <span>Get In Touch</span>
                         <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
                 </div>
@@ -102,16 +108,16 @@
         </div>
 
         <!-- Mobile Nav Menu dropdown -->
-        <div class="hidden md:hidden border-t border-brand-100 bg-white" id="mobile-menu">
-            <div class="px-2 pt-2 pb-4 space-y-1">
-                <a href="#home" class="block px-4 py-3 rounded-lg text-stone-700 hover:bg-brand-100 hover:text-forest-500 font-medium transition-all">Home</a>
-                <a href="#benefits" class="block px-4 py-3 rounded-lg text-stone-700 hover:bg-brand-100 hover:text-forest-500 font-medium transition-all">Why Millets?</a>
-                <a href="#products" class="block px-4 py-3 rounded-lg text-stone-700 hover:bg-brand-100 hover:text-forest-500 font-medium transition-all">Our Products</a>
-                <a href="#story" class="block px-4 py-3 rounded-lg text-stone-700 hover:bg-brand-100 hover:text-forest-500 font-medium transition-all">Our Story</a>
-                <a href="#contact" class="block px-4 py-3 rounded-lg text-stone-700 hover:bg-brand-100 hover:text-forest-500 font-medium transition-all">Contact</a>
-                <div class="pt-2 px-4">
-                    <a href="#products" class="block w-full text-center bg-forest-500 hover:bg-forest-600 text-white py-3 rounded-full font-semibold transition-all">
-                        Explore Products
+        <div class="hidden md:hidden border-t border-brand-100 bg-brand-50" id="mobile-menu">
+            <div class="px-3 pt-2 pb-5 space-y-1">
+                <a href="#home" class="block px-4 py-3 rounded-xl text-stone-700 hover:bg-brand-100 hover:text-forest-500 font-semibold transition-all">Home</a>
+                <a href="#truth" class="block px-4 py-3 rounded-xl text-stone-700 hover:bg-brand-100 hover:text-forest-500 font-semibold transition-all">The Honest Truth</a>
+                <a href="#explorer" class="block px-4 py-3 rounded-xl text-stone-700 hover:bg-brand-100 hover:text-forest-500 font-semibold transition-all">Millet Explorer</a>
+                <a href="#products" class="block px-4 py-3 rounded-xl text-stone-700 hover:bg-brand-100 hover:text-forest-500 font-semibold transition-all">Future Range</a>
+                <a href="#story" class="block px-4 py-3 rounded-xl text-stone-700 hover:bg-brand-100 hover:text-forest-500 font-semibold transition-all">Our Story</a>
+                <div class="pt-3 px-4">
+                    <a href="#contact" class="block w-full text-center bg-forest-500 hover:bg-forest-600 text-brand-50 py-3 rounded-xl font-bold">
+                        Get In Touch
                     </a>
                 </div>
             </div>
@@ -119,91 +125,103 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section id="home" class="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-b from-brand-100 via-brand-50 to-white relative overflow-hidden">
-        <!-- SVG background pattern circles -->
-        <div class="absolute -right-32 -top-32 w-96 h-96 rounded-full bg-brand-200/40 blur-3xl -z-10"></div>
-        <div class="absolute -left-32 bottom-0 w-96 h-96 rounded-full bg-forest-100/30 blur-3xl -z-10"></div>
+    <section id="home" class="pt-32 pb-20 lg:pt-40 lg:pb-32 bg-gradient-to-b from-brand-100 via-brand-50 to-white relative overflow-hidden">
+        <!-- Background organic shapes -->
+        <div class="absolute -right-32 -top-32 w-[32rem] h-[32rem] rounded-full bg-brand-200/30 blur-3xl -z-10"></div>
+        <div class="absolute -left-32 bottom-0 w-96 h-96 rounded-full bg-forest-100/40 blur-3xl -z-10"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
                 
                 <!-- Hero Content -->
-                <div class="space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 bg-forest-100 text-forest-700 px-4 py-1.5 rounded-full text-sm font-medium tracking-wide">
-                        <i class="fa-solid fa-seedling"></i>
-                        <span>100% Natural & Sustainable Grains</span>
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-forest-100 text-forest-700 px-4 py-1.5 rounded-full text-xs font-bold tracking-wide">
+                        <i class="fa-solid fa-sparkles"></i>
+                        <span>100% WHOLE GRAINS • ZERO FILLERS • ZERO CHEMICALS</span>
                     </div>
                     
                     <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-900 leading-tight">
-                        Healthy Eating Made <span class="text-forest-500 italic font-normal">Delightfully</span> Simple
+                        Ancient Grains. <br class="hidden sm:inline">
+                        <span class="text-forest-500 italic font-normal">Zero Hidden Junk.</span> <br>
+                        Honest Nutrition.
                     </h1>
                     
-                    <p class="text-lg text-stone-600 max-w-xl mx-auto lg:mx-0">
-                        Love Millets brings you premium, nutrient-rich gluten-free flours, instant multi-grain breakfast mixes, and wholesome grains sourced directly from local farming communities.
+                    <p class="text-lg text-stone-600 max-w-xl mx-auto lg:mx-0 font-medium">
+                        Inspired by radical transparency. We believe food should have nothing to hide. Love Millets delivers clean, nutritious flours, wholesome grains, and instant breakfast mixes crafted with simple, raw, and sustainable ingredients.
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#products" class="bg-forest-500 hover:bg-forest-600 text-white px-8 py-3.5 rounded-full font-bold text-center transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2">
-                            <span>Explore Product Line</span>
+                        <a href="#products" class="bg-forest-500 hover:bg-forest-600 text-brand-50 px-8 py-3.5 rounded-xl font-bold text-center transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 text-sm">
+                            <span>Explore Upcoming Range</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
-                        <a href="#benefits" class="border border-stone-300 hover:border-forest-500 hover:bg-white text-stone-700 hover:text-forest-500 px-8 py-3.5 rounded-full font-bold text-center transition-all flex items-center justify-center gap-2 bg-transparent">
-                            <span>Why Eat Millets?</span>
+                        <a href="#truth" class="border border-stone-300 hover:border-forest-500 hover:bg-white text-stone-700 hover:text-forest-500 px-8 py-3.5 rounded-xl font-bold text-center transition-all text-sm bg-transparent">
+                            <span>See Our No-Junk Promise</span>
                         </a>
                     </div>
                     
-                    <!-- Trust badges -->
-                    <div class="pt-8 border-t border-brand-200/60 flex flex-wrap gap-6 justify-center lg:justify-start text-stone-500 text-sm">
+                    <!-- Slogan Badge -->
+                    <div class="pt-8 border-t border-brand-200 flex flex-wrap gap-6 justify-center lg:justify-start text-stone-500 text-xs font-bold">
                         <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-check text-forest-500"></i>
-                            <span>Gluten Free</span>
+                            <i class="fa-solid fa-circle-check text-forest-500 text-sm"></i>
+                            <span>NATIVE WHOLE MILLETS</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-check text-forest-500"></i>
-                            <span>Rich in Fiber & Protein</span>
+                            <i class="fa-solid fa-circle-check text-forest-500 text-sm"></i>
+                            <span>NO ADDED REFINED SUGAR</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-check text-forest-500"></i>
-                            <span>No Artificial Preservatives</span>
+                            <i class="fa-solid fa-circle-check text-forest-500 text-sm"></i>
+                            <span>NO PRESERVATIVES OR ARTIFICIAL BINDERS</span>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Hero Graphics (Mockup Image / Vector illustration placeholder) -->
-                <div class="relative max-w-md lg:max-w-none mx-auto w-full">
-                    <div class="relative w-full aspect-square rounded-2xl bg-gradient-to-br from-brand-200 to-forest-100 flex items-center justify-center p-8 shadow-xl border-4 border-white">
-                        <!-- Simulated Bowl & Grains Graphics -->
-                        <div class="text-center p-6 bg-white/95 rounded-xl shadow-lg border border-brand-100 space-y-4 max-w-xs relative z-10">
-                            <div class="w-16 h-16 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center mx-auto text-2xl shadow-inner">
-                                <i class="fa-solid fa-bowl-rice"></i>
+                <!-- Hero Graphics (Clean Ingredient Card Design inspired by The Whole Truth) -->
+                <div class="lg:col-span-5 relative max-w-md lg:max-w-none mx-auto w-full">
+                    <div class="relative w-full aspect-square rounded-3xl bg-gradient-to-br from-brand-200 to-forest-100 flex items-center justify-center p-8 shadow-xl border-4 border-white">
+                        
+                        <!-- Premium Product Box mockup wrapper -->
+                        <div class="w-full bg-white/95 rounded-2xl shadow-lg border border-brand-100 p-6 space-y-5 relative z-10">
+                            <!-- Visual Badge -->
+                            <div class="flex items-center justify-between">
+                                <span class="bg-brand-500 text-brand-50 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Concept Preview</span>
+                                <span class="text-stone-400 text-xs font-bold"><i class="fa-solid fa-leaf mr-1 text-forest-500"></i> Sustainable</span>
                             </div>
-                            <h3 class="font-serif text-xl font-bold text-stone-900">Love Millets Bowl</h3>
-                            <p class="text-sm text-stone-500 leading-relaxed">
-                                Delicious, whole millet breakfast that cooks in just 5 minutes. Clean nutrition, sustained energy.
-                            </p>
-                            <span class="inline-block bg-brand-50 text-brand-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Coming Soon</span>
+                            
+                            <!-- Large Graphic Symbol -->
+                            <div class="py-6 text-center border-y border-brand-100/60 bg-brand-50/50 rounded-xl">
+                                <i class="fa-solid fa-wheat-awn text-6xl text-brand-500"></i>
+                                <h3 class="font-serif text-2xl font-bold text-stone-900 mt-2">Love Millets Ragi Flour</h3>
+                                <p class="text-xs text-stone-400 uppercase tracking-widest font-bold mt-1">100% Whole Finger Millet</p>
+                            </div>
+                            
+                            <!-- Radical Transparency Label (The Whole Truth Style) -->
+                            <div class="space-y-3 pt-1">
+                                <span class="text-[10px] font-bold text-stone-400 uppercase tracking-wider">Ingredients on front:</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-forest-50 text-forest-700 text-xs font-bold px-3 py-1.5 rounded-lg border border-forest-100">100% Pure Ragi Grains</span>
+                                    <span class="bg-stone-100 text-stone-500 text-xs font-bold px-3 py-1.5 rounded-lg border border-stone-200 flex items-center gap-1">
+                                        <i class="fa-solid fa-ban text-red-500"></i> 0% Wheat Fillers
+                                    </span>
+                                    <span class="bg-stone-100 text-stone-500 text-xs font-bold px-3 py-1.5 rounded-lg border border-stone-200 flex items-center gap-1">
+                                        <i class="fa-solid fa-ban text-red-500"></i> 0% Preservatives
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                         
-                        <!-- Floating Nutritional Cards -->
+                        <!-- Floating Trust Elements -->
                         <div class="absolute -top-4 right-4 bg-white px-4 py-3 rounded-xl shadow-md border border-brand-100 flex items-center gap-3 animate-bounce" style="animation-duration: 4s;">
                             <div class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center text-sm">
                                 <i class="fa-solid fa-heart"></i>
                             </div>
                             <div>
-                                <p class="text-[10px] text-stone-400 font-semibold uppercase tracking-wider leading-none">Glycemic Index</p>
-                                <p class="text-xs font-bold text-stone-800">Ultra Low & Diabetes Friendly</p>
+                                <p class="text-[10px] text-stone-400 font-bold uppercase tracking-wider leading-none">Healthy Heart</p>
+                                <p class="text-xs font-extrabold text-stone-800">Low Glycemic Index</p>
                             </div>
                         </div>
                         
-                        <div class="absolute -bottom-4 -left-4 bg-white px-4 py-3 rounded-xl shadow-md border border-brand-100 flex items-center gap-3 animate-pulse">
-                            <div class="w-8 h-8 bg-amber-100 text-brand-600 rounded-full flex items-center justify-center text-sm">
-                                <i class="fa-solid fa-leaf"></i>
-                            </div>
-                            <div>
-                                <p class="text-[10px] text-stone-400 font-semibold uppercase tracking-wider leading-none">Impact</p>
-                                <p class="text-xs font-bold text-stone-800">100% Eco-Friendly Cultivation</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -211,155 +229,266 @@
         </div>
     </section>
 
-    <!-- NUTRITION & SUSTAINABILITY BENEFITS SECTION -->
-    <section id="benefits" class="py-20 lg:py-28 bg-white border-y border-brand-100">
+    <!-- RADICAL TRANSPARENCY SECTION (The Whole Truth & True Elements Inspiration) -->
+    <section id="truth" class="py-20 lg:py-28 bg-white border-y border-brand-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-                <span class="text-brand-500 font-bold uppercase tracking-widest text-xs">A Powerhouse of Nutrition</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900">Why Make the Switch to Millets?</h2>
-                <p class="text-stone-600">
-                    Millets are ancient super-grains that have fed civilizations for over 5,000 years. They are not only nutritional giants but are also incredibly sustainable to grow.
+                <span class="text-brand-500 font-bold uppercase tracking-widest text-xs">A Sincere Philosophy</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900">Let's Decode the "Healthy Food" Lies</h2>
+                <p class="text-stone-600 font-medium">
+                    A lot of packaged food claims to be "healthy" on the front, but hides cheap wheat fillers, artificial binders, and processed sugar on the back. At Love Millets, we practice **front-of-pack truth**.
                 </p>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Benefit 1 -->
-                <div class="bg-brand-50 p-8 rounded-2xl border border-brand-100 space-y-4 hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 bg-forest-100 text-forest-700 rounded-xl flex items-center justify-center text-xl">
-                        <i class="fa-solid fa-ban"></i>
+            <!-- Comparison Grid (DTC Clean Brand Style) -->
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Competitors / The Bad guys -->
+                <div class="border border-red-100 bg-red-50/20 p-8 rounded-3xl space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-circle-xmark"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-stone-900">Standard "Healthy" Flour & Mixes</h3>
+                            <p class="text-xs text-stone-400 font-bold uppercase">The Hidden Reality</p>
+                        </div>
                     </div>
-                    <h3 class="font-serif text-xl font-bold text-stone-900">Naturally Gluten-Free</h3>
-                    <p class="text-stone-600 text-sm leading-relaxed">
-                        Excellent alternative for individuals with gluten sensitivities, celiac disease, or those choosing a clean, allergen-free diet. Perfect digestability.
-                    </p>
+                    
+                    <ul class="space-y-4 text-sm text-stone-600">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-arrow-right text-red-500 mt-1 flex-shrink-0"></i>
+                            <span><strong>Diluted with Wheat:</strong> Often labeled "Ragi" or "Millet" flour but mixed with cheap refined wheat flour (Maida) to cut costs.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-arrow-right text-red-500 mt-1 flex-shrink-0"></i>
+                            <span><strong>Chemical Binders:</strong> Artificial gums and emulsifiers added to improve dough texture because millets are naturally gluten-free.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-arrow-right text-red-500 mt-1 flex-shrink-0"></i>
+                            <span><strong>Sneaky Sugars:</strong> Maltodextrin, corn syrup, or refined sugar added to breakfast premixes to enhance flavor, spike energy, and increase shelf-life.</span>
+                        </li>
+                    </ul>
                 </div>
                 
-                <!-- Benefit 2 -->
-                <div class="bg-brand-50 p-8 rounded-2xl border border-brand-100 space-y-4 hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 bg-forest-100 text-forest-700 rounded-xl flex items-center justify-center text-xl">
-                        <i class="fa-solid fa-chart-line-down" style="transform: scaleY(-1);"></i>
+                <!-- Our promise / The Good guys -->
+                <div class="border border-forest-100 bg-forest-50/20 p-8 rounded-3xl space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-forest-100 text-forest-700 rounded-full flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-stone-900">Love Millets Clean Promise</h3>
+                            <p class="text-xs text-forest-600 font-bold uppercase">Our Unshakable Truth</p>
+                        </div>
                     </div>
-                    <h3 class="font-serif text-xl font-bold text-stone-900">Low Glycemic Index</h3>
-                    <p class="text-stone-600 text-sm leading-relaxed">
-                        Slow-release complex carbohydrates help regulate blood sugar levels, preventing spikes and crashes while keeping you energized and fuller for longer.
-                    </p>
+                    
+                    <ul class="space-y-4 text-sm text-stone-600">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-forest-600 mt-1 flex-shrink-0"></i>
+                            <span><strong>100% Pure Grains:</strong> What you see is what you get. Our Ragi flour contains exactly 100% Ragi—completely unadulterated.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-forest-600 mt-1 flex-shrink-0"></i>
+                            <span><strong>Zero Binders or Chemicals:</strong> No stabilizers, thickeners, or synthetic gums. We celebrate the natural gluten-free characteristics of millets.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-forest-600 mt-1 flex-shrink-0"></i>
+                            <span><strong>Absolutely No Maltodextrin:</strong> Our products contain zero refined sugar or artificial sweeteners. Any future sweetness will come purely from natural whole fruits (like dates) or natural honey, keeping our core range completely unsweetened.</span>
+                        </li>
+                    </ul>
                 </div>
                 
-                <!-- Benefit 3 -->
-                <div class="bg-brand-50 p-8 rounded-2xl border border-brand-100 space-y-4 hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 bg-forest-100 text-forest-700 rounded-xl flex items-center justify-center text-xl">
-                        <i class="fa-solid fa-dumbbell"></i>
-                    </div>
-                    <h3 class="font-serif text-xl font-bold text-stone-900">Mineral & Protein Rich</h3>
-                    <p class="text-stone-600 text-sm leading-relaxed">
-                        Packed with vital micronutrients like Iron, Calcium, Magnesium, and essential amino acids. Provides structural components for optimal health.
-                    </p>
-                </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Benefit 4 -->
-                <div class="bg-brand-50 p-8 rounded-2xl border border-brand-100 space-y-4 hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 bg-forest-100 text-forest-700 rounded-xl flex items-center justify-center text-xl">
-                        <i class="fa-solid fa-droplet-slash"></i>
-                    </div>
-                    <h3 class="font-serif text-xl font-bold text-stone-900">Drought-Resilient Crops</h3>
-                    <p class="text-stone-600 text-sm leading-relaxed">
-                        Millets need 70% less water than rice or wheat and can thrive in poor sandy soils, making them highly resilient to climate change.
-                    </p>
+    <!-- INTERACTIVE MILLET EXPLORER SECTION (Slurrp Farm Inspiration) -->
+    <section id="explorer" class="py-20 lg:py-28 bg-brand-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-brand-500 font-bold uppercase tracking-widest text-xs">Nutrition Library</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900">Explore the Ancient Superfoods</h2>
+                <p class="text-stone-600">
+                    Different millets bring different nutritional superpowers. Select a grain below to see what makes it unique and how it nourishes your body.
+                </p>
+            </div>
+            
+            <!-- Interactive Tab Component -->
+            <div class="max-w-4xl mx-auto">
+                <!-- Tab Selectors -->
+                <div class="flex flex-wrap gap-2 sm:gap-4 justify-center mb-10 border-b border-brand-200 pb-4">
+                    <button onclick="switchMillet('ragi')" id="btn-ragi" class="millet-tab-btn active bg-forest-500 text-brand-50 border-forest-500 font-bold px-6 py-3 rounded-xl text-sm transition-all border shadow">
+                        Ragi (Finger Millet)
+                    </button>
+                    <button onclick="switchMillet('jowar')" id="btn-jowar" class="millet-tab-btn bg-white text-stone-600 border-stone-200 hover:border-forest-500 font-bold px-6 py-3 rounded-xl text-sm transition-all border">
+                        Jowar (Sorghum)
+                    </button>
+                    <button onclick="switchMillet('foxtail')" id="btn-foxtail" class="millet-tab-btn bg-white text-stone-600 border-stone-200 hover:border-forest-500 font-bold px-6 py-3 rounded-xl text-sm transition-all border">
+                        Foxtail Millet
+                    </button>
                 </div>
-
-                <!-- Benefit 5 -->
-                <div class="bg-brand-50 p-8 rounded-2xl border border-brand-100 space-y-4 hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 bg-forest-100 text-forest-700 rounded-xl flex items-center justify-center text-xl">
-                        <i class="fa-solid fa-hands-holding-child"></i>
+                
+                <!-- Tab Content panels -->
+                <div class="bg-white rounded-3xl p-8 border border-brand-100 shadow-sm">
+                    
+                    <!-- PANEL: RAGI -->
+                    <div id="panel-ragi" class="millet-panel grid md:grid-cols-12 gap-8 items-center">
+                        <div class="md:col-span-4 text-center">
+                            <div class="w-32 h-32 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center text-5xl mx-auto shadow-inner">
+                                <i class="fa-solid fa-bone"></i>
+                            </div>
+                            <span class="inline-block bg-brand-500 text-brand-50 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider mt-4">Bone & Growth Builder</span>
+                        </div>
+                        <div class="md:col-span-8 space-y-4">
+                            <h3 class="font-serif text-2xl font-bold text-stone-900">Ragi: The Calcium Powerhouse</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                Ragi has **3x more Calcium** than milk and is rich in natural iron. It is highly recommended for growing children, nursing mothers, and anyone looking to enhance bone density naturally.
+                            </p>
+                            
+                            <!-- Stats list -->
+                            <div class="grid grid-cols-2 gap-4 border-t border-brand-100 pt-4">
+                                <div>
+                                    <p class="text-[10px] font-bold text-stone-400 uppercase tracking-wider">Major Superpower</p>
+                                    <p class="text-sm font-bold text-forest-700">Massive Calcium Density</p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-bold text-stone-400 uppercase tracking-wider">Perfect For</p>
+                                    <p class="text-sm font-bold text-forest-700">Porridge, Rotis & Baby Food</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="font-serif text-xl font-bold text-stone-900">Empowering Small Farmers</h3>
-                    <p class="text-stone-600 text-sm leading-relaxed">
-                        We collaborate directly with rural, independent farms to secure fair-trade practices, ensuring maximum economic support returns to the growers.
-                    </p>
-                </div>
-
-                <!-- Benefit 6 -->
-                <div class="bg-brand-50 p-8 rounded-2xl border border-brand-100 space-y-4 hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 bg-forest-100 text-forest-700 rounded-xl flex items-center justify-center text-xl">
-                        <i class="fa-solid fa-cookie-bite"></i>
+                    
+                    <!-- PANEL: JOWAR (Hidden initially) -->
+                    <div id="panel-jowar" class="millet-panel hidden grid md:grid-cols-12 gap-8 items-center">
+                        <div class="md:col-span-4 text-center">
+                            <div class="w-32 h-32 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center text-5xl mx-auto shadow-inner">
+                                <i class="fa-solid fa-wheat-awn"></i>
+                            </div>
+                            <span class="inline-block bg-brand-500 text-brand-50 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider mt-4">Gluten-Free Wheat Alternative</span>
+                        </div>
+                        <div class="md:col-span-8 space-y-4">
+                            <h3 class="font-serif text-2xl font-bold text-stone-900">Jowar: The Daily Staple</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                Jowar is naturally gluten-free and extremely rich in protein, iron, and dietary fiber. It behaves closest to wheat, making it the absolute easiest flour substitute for soft, healthy rotis.
+                            </p>
+                            
+                            <!-- Stats list -->
+                            <div class="grid grid-cols-2 gap-4 border-t border-brand-100 pt-4">
+                                <div>
+                                    <p class="text-[10px] font-bold text-stone-400 uppercase tracking-wider">Major Superpower</p>
+                                    <p class="text-sm font-bold text-forest-700">High Digestible Protein</p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-bold text-stone-400 uppercase tracking-wider">Perfect For</p>
+                                    <p class="text-sm font-bold text-forest-700">Soft Gluten-Free Rotis & Baking</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="font-serif text-xl font-bold text-stone-900">Versatile Culinary Use</h3>
-                    <p class="text-stone-600 text-sm leading-relaxed">
-                        Easily substitutes wheat, rice, or corn in baking, standard cooking, and snacking. Easily prepare delicious Rotis, Porridges, Pancakes, and more!
-                    </p>
+                    
+                    <!-- PANEL: FOXTAIL (Hidden initially) -->
+                    <div id="panel-foxtail" class="millet-panel hidden grid md:grid-cols-12 gap-8 items-center">
+                        <div class="md:col-span-4 text-center">
+                            <div class="w-32 h-32 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center text-5xl mx-auto shadow-inner">
+                                <i class="fa-solid fa-chart-line-down" style="transform: scaleY(-1);"></i>
+                            </div>
+                            <span class="inline-block bg-brand-500 text-brand-50 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider mt-4">Metabolism & Blood Sugar Regulator</span>
+                        </div>
+                        <div class="md:col-span-8 space-y-4">
+                            <h3 class="font-serif text-2xl font-bold text-stone-900">Foxtail Millet: The Smart Carb</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                Foxtail millet is packed with complex carbohydrates and prebiotic fiber, resulting in a low glycemic index. It slow-releases energy, helping manage diabetes and aiding weight loss.
+                            </p>
+                            
+                            <!-- Stats list -->
+                            <div class="grid grid-cols-2 gap-4 border-t border-brand-100 pt-4">
+                                <div>
+                                    <p class="text-[10px] font-bold text-stone-400 uppercase tracking-wider">Major Superpower</p>
+                                    <p class="text-sm font-bold text-forest-700">Low GI & Diabetic Friendly</p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-bold text-stone-400 uppercase tracking-wider">Perfect For</p>
+                                    <p class="text-sm font-bold text-forest-700">Rice Substitution, Khichdi & Pulav</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PRODUCT CATEGORIES SHOWCASE SECTION -->
-    <section id="products" class="py-20 lg:py-28 bg-brand-50">
+    <!-- FUTURE CATALOG SECTION (Surgical Framing) -->
+    <section id="products" class="py-20 lg:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-                <span class="text-brand-500 font-bold uppercase tracking-widest text-xs">Our Future Catalog</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900">Crafted Millet Offerings</h2>
+                <span class="text-brand-500 font-bold uppercase tracking-widest text-xs">Our Future Roadmap</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900">Carefully Curated Product Range</h2>
                 <p class="text-stone-600">
-                    We are currently formulating our primary healthy product lines. Browse through our upcoming categories designed to nourish your daily routine.
+                    We are currently building relationships with quality millet suppliers. Take an early look at the simple, honest offerings we are preparing to launch.
                 </p>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Product Category 1 -->
-                <div class="bg-white rounded-3xl overflow-hidden border border-brand-100 shadow-sm flex flex-col group hover:shadow-md transition-all">
-                    <div class="h-56 bg-brand-200/50 flex items-center justify-center p-6 relative">
-                        <span class="absolute top-4 left-4 bg-forest-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow">Coming Soon</span>
+                <div class="bg-brand-50 rounded-3xl overflow-hidden border border-brand-100 flex flex-col group hover:shadow-md transition-all hover-card-trigger">
+                    <div class="h-56 bg-brand-100/60 flex items-center justify-center p-6 relative">
+                        <span class="absolute top-4 left-4 bg-forest-500 text-brand-50 text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow">Coming Soon</span>
                         <i class="fa-solid fa-wheat-awn text-7xl text-brand-400 group-hover:scale-110 transition-transform duration-300"></i>
                     </div>
                     <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
                         <div class="space-y-2">
                             <h3 class="font-serif text-xl font-bold text-stone-900">Premium Millet Flours</h3>
                             <p class="text-stone-500 text-sm leading-relaxed">
-                                Stone-ground flours including Ragi (Finger Millet), Jowar (Sorghum), and Bajra (Pearl Millet). Gluten-free and ideal for daily chapatis and baking.
+                                Stone-ground single-origin flours including Ragi, Jowar, and Bajra. Gluten-free, zero blending agents, perfect for healthy rotis and baking.
                             </p>
                         </div>
-                        <ul class="text-xs space-y-2 text-stone-600 border-t border-brand-100 pt-4">
+                        <ul class="text-xs space-y-2 text-stone-600 border-t border-brand-200 pt-4">
                             <li class="flex items-center gap-2">
                                 <i class="fa-solid fa-circle-check text-forest-500"></i>
-                                <span>Single-origin and whole-grain ground</span>
+                                <span>No added starch or wheat flour blending</span>
                             </li>
                             <li class="flex items-center gap-2">
                                 <i class="fa-solid fa-circle-check text-forest-500"></i>
-                                <span>High dietary fiber content</span>
+                                <span>Freshly packed to preserve grain oils</span>
                             </li>
                         </ul>
                     </div>
                 </div>
                 
                 <!-- Product Category 2 -->
-                <div class="bg-white rounded-3xl overflow-hidden border border-brand-100 shadow-sm flex flex-col group hover:shadow-md transition-all">
-                    <div class="h-56 bg-brand-200/50 flex items-center justify-center p-6 relative">
-                        <span class="absolute top-4 left-4 bg-forest-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow">Coming Soon</span>
-                        <i class="fa-solid fa-box text-7xl text-brand-400 group-hover:scale-110 transition-transform duration-300"></i>
+                <div class="bg-brand-50 rounded-3xl overflow-hidden border border-brand-100 flex flex-col group hover:shadow-md transition-all hover-card-trigger">
+                    <div class="h-56 bg-brand-100/60 flex items-center justify-center p-6 relative">
+                        <span class="absolute top-4 left-4 bg-forest-500 text-brand-50 text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow">Coming Soon</span>
+                        <i class="fa-solid fa-bowl-rice text-7xl text-brand-400 group-hover:scale-110 transition-transform duration-300"></i>
                     </div>
                     <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
                         <div class="space-y-2">
-                            <h3 class="font-serif text-xl font-bold text-stone-900">Instant Cook Mixes</h3>
+                            <h3 class="font-serif text-xl font-bold text-stone-900">Instant Breakfast Mixes</h3>
                             <p class="text-stone-500 text-sm leading-relaxed">
-                                Ready-to-cook healthy breakfast premixes: Millet Dosa, Idli, Upma, and nutrient-rich warm Porridges. Cooks in under 10 minutes with zero hassle.
+                                Wholesome instant breakfast premixes: Millet Dosa, Idli, Upma, and nutrient-dense hot Porridges. Ready in under 10 minutes with zero junk.
                             </p>
                         </div>
-                        <ul class="text-xs space-y-2 text-stone-600 border-t border-brand-100 pt-4">
+                        <ul class="text-xs space-y-2 text-stone-600 border-t border-brand-200 pt-4">
                             <li class="flex items-center gap-2">
                                 <i class="fa-solid fa-circle-check text-forest-500"></i>
                                 <span>Just add water/curd and cook</span>
                             </li>
                             <li class="flex items-center gap-2">
                                 <i class="fa-solid fa-circle-check text-forest-500"></i>
-                                <span>Infused with high-quality natural herbs & spices</span>
+                                <span>No maltodextrin or artificial preservatives</span>
                             </li>
                         </ul>
                     </div>
                 </div>
                 
                 <!-- Product Category 3 -->
-                <div class="bg-white rounded-3xl overflow-hidden border border-brand-100 shadow-sm flex flex-col group hover:shadow-md transition-all">
-                    <div class="h-56 bg-brand-200/50 flex items-center justify-center p-6 relative">
-                        <span class="absolute top-4 left-4 bg-forest-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow">Coming Soon</span>
+                <div class="bg-brand-50 rounded-3xl overflow-hidden border border-brand-100 flex flex-col group hover:shadow-md transition-all hover-card-trigger">
+                    <div class="h-56 bg-brand-100/60 flex items-center justify-center p-6 relative">
+                        <span class="absolute top-4 left-4 bg-forest-500 text-brand-50 text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow">Coming Soon</span>
                         <i class="fa-solid fa-seedling text-7xl text-brand-400 group-hover:scale-110 transition-transform duration-300"></i>
                     </div>
                     <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
@@ -369,7 +498,7 @@
                                 Premium, clean whole millets including Foxtail, Barnyard, and Little Millets. An excellent, high-fiber substitute for rice or quinoa.
                             </p>
                         </div>
-                        <ul class="text-xs space-y-2 text-stone-600 border-t border-brand-100 pt-4">
+                        <ul class="text-xs space-y-2 text-stone-600 border-t border-brand-200 pt-4">
                             <li class="flex items-center gap-2">
                                 <i class="fa-solid fa-circle-check text-forest-500"></i>
                                 <span>Triple-cleaned and desanded</span>
@@ -388,14 +517,14 @@
                 <div class="absolute right-0 bottom-0 w-64 h-64 bg-forest-600/50 rounded-full translate-x-10 translate-y-10 -z-0"></div>
                 <div class="relative z-10 grid lg:grid-cols-2 gap-8 items-center">
                     <div class="space-y-2">
-                        <h3 class="font-serif text-2xl sm:text-3xl font-bold">Get 15% Off Our Launch Catalog</h3>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold">Secure Your 15% Launch Discount</h3>
                         <p class="text-forest-100 text-sm">
-                            Subscribe to get notified the exact day we launch. Receive healthy recipes and early-bird discounts directly.
+                            Subscribe to receive honest health recipes, ancient diet guides, and notification the day we launch our clean product line.
                         </p>
                     </div>
                     <form class="flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault(); alert('Thank you for subscribing! We will notify you at this email.');">
-                        <input type="email" placeholder="Enter your email address" required class="flex-grow px-5 py-3 rounded-full text-stone-800 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-brand-400 text-sm">
-                        <button type="submit" class="bg-brand-400 hover:bg-brand-500 text-stone-900 font-bold px-6 py-3 rounded-full text-sm transition-colors shadow">
+                        <input type="email" placeholder="Enter your email address" required class="flex-grow px-5 py-3 rounded-xl text-stone-800 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-brand-400 text-sm">
+                        <button type="submit" class="bg-brand-400 hover:bg-brand-500 text-stone-900 font-bold px-6 py-3 rounded-xl text-sm transition-colors shadow">
                             Notify Me
                         </button>
                     </form>
@@ -405,43 +534,43 @@
     </section>
 
     <!-- OUR STORY SECTION -->
-    <section id="story" class="py-20 lg:py-28 bg-white">
+    <section id="story" class="py-20 lg:py-28 bg-brand-50 border-t border-brand-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <!-- Visual graphic -->
-                <div class="order-2 lg:order-1 bg-brand-50 p-6 rounded-2xl border border-brand-100 flex flex-col justify-center space-y-6 relative shadow-inner">
-                    <blockquote class="border-l-4 border-forest-500 pl-4 py-1 italic text-lg text-stone-700 font-serif">
-                        "Our mission is to bring nutrient-dense, locally grown crops back into modern diets while preserving our planet's precious water resources."
+                <!-- Visual quote -->
+                <div class="order-2 lg:order-1 bg-white p-8 rounded-3xl border border-brand-100 flex flex-col justify-center space-y-6 relative shadow-sm">
+                    <blockquote class="border-l-4 border-forest-500 pl-4 py-1 italic text-lg text-stone-700 font-serif leading-relaxed">
+                        "We noticed that most 'millet' products in the market had more wheat flour and chemicals than actual millets. We wanted to change that. Love Millets is about bringing honest, clean ancient food back to our tables."
                     </blockquote>
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-forest-500 text-white flex items-center justify-center text-lg shadow">
-                            <i class="fa-solid fa-seedling"></i>
+                        <div class="w-12 h-12 rounded-full bg-forest-500 text-brand-100 flex items-center justify-center text-lg shadow">
+                            <i class="fa-solid fa-leaf"></i>
                         </div>
                         <div>
                             <p class="font-bold text-stone-900 text-sm">The Love Millets Family</p>
-                            <p class="text-xs text-stone-400 font-semibold uppercase tracking-wider">Sustainable Agriculture Advocates</p>
+                            <p class="text-xs text-stone-400 font-bold uppercase tracking-wider">Sustainable Agriculture Advocates</p>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Text Story Content -->
                 <div class="space-y-6 order-1 lg:order-2">
-                    <span class="text-brand-500 font-bold uppercase tracking-widest text-xs">Our Heritage & Mission</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900">Reviving Ancient Agriculture</h2>
+                    <span class="text-brand-500 font-bold uppercase tracking-widest text-xs">Our Heritage & Vision</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900">The Power of Clean, Uncompromised Food</h2>
                     <p class="text-stone-600 leading-relaxed">
-                        Love Millets was born out of a profound realization: modern dietary patterns have systematically moved away from highly robust, nutritional, and water-efficient staple grains in favor of polished, resource-intensive grains. This shift has affected public health and impacted the environment.
+                        Love Millets was born out of a simple observation: modern diets have systematically replaced incredibly robust, nutrient-dense, and water-efficient grains with processed carbohydrates and synthetic fillers. 
                     </p>
                     <p class="text-stone-600 leading-relaxed">
-                        We decided to source pure millets directly from native Indian regions where traditional farming protocols are still practiced. By cutting out middle-tier brokers, we support farmers directly and ensure that only clean, unadulterated, and nutritionally preserved food reaches your kitchen counter.
+                        We decided to take a different path. Our goal is to bring the absolute truth to packaging. By sourcing clean grains directly from traditional farming regions, we ensure that only unadulterated, uncompromised, and climate-resilient foods reach your kitchen table. No brokers, no hidden starches, no chemical thickeners. Just clean nutrition.
                     </p>
                     <div class="grid grid-cols-2 gap-6 pt-4 text-center lg:text-left">
                         <div class="space-y-1">
-                            <p class="text-3xl font-bold text-forest-500 font-serif">100%</p>
-                            <p class="text-xs text-stone-500 font-medium">Naturally Cultivated</p>
+                            <p class="text-3xl font-bold text-forest-500 font-serif">Zero</p>
+                            <p class="text-xs text-stone-500 font-bold uppercase tracking-wide">Wheat Fillers</p>
                         </div>
                         <div class="space-y-1">
-                            <p class="text-3xl font-bold text-forest-500 font-serif">Fair Trade</p>
-                            <p class="text-xs text-stone-500 font-medium">Direct Sourcing</p>
+                            <p class="text-3xl font-bold text-forest-500 font-serif">100%</p>
+                            <p class="text-xs text-stone-500 font-bold uppercase tracking-wide">Honest Transparency</p>
                         </div>
                     </div>
                 </div>
@@ -450,7 +579,7 @@
     </section>
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="py-20 lg:py-28 bg-brand-50 border-t border-brand-100">
+    <section id="contact" class="py-20 lg:py-28 bg-white border-t border-brand-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-5 gap-12 lg:gap-16">
                 
@@ -464,7 +593,7 @@
                     
                     <div class="space-y-4 pt-4">
                         <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-forest-500 shadow-sm border border-brand-100">
+                            <div class="w-10 h-10 bg-brand-50 rounded-xl flex items-center justify-center text-forest-500 shadow-sm border border-brand-100">
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
                             <div>
@@ -475,42 +604,42 @@
                         </div>
                         
                         <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-forest-500 shadow-sm border border-brand-100">
+                            <div class="w-10 h-10 bg-brand-50 rounded-xl flex items-center justify-center text-forest-500 shadow-sm border border-brand-100">
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold text-stone-800 text-sm">Location</h4>
-                                <p class="text-sm text-stone-600">Bangalore, Karnataka, India</p>
+                                <p class="text-sm text-stone-600 font-semibold">Bangalore, Karnataka, India</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Form -->
-                <div class="lg:col-span-3 bg-white p-8 rounded-3xl shadow-sm border border-brand-100">
+                <div class="lg:col-span-3 bg-brand-50 p-8 rounded-3xl border border-brand-100">
                     <form class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you for reaching out! We have received your query and will reply within 24 hours.');">
                         <div class="grid sm:grid-cols-2 gap-6">
                             <div class="space-y-1.5">
                                 <label for="first-name" class="text-xs font-bold text-stone-500 uppercase tracking-wider">First Name</label>
-                                <input type="text" id="first-name" required class="w-full px-4 py-2.5 rounded-xl border border-stone-200 focus:outline-none focus:border-forest-500 text-sm">
+                                <input type="text" id="first-name" required class="w-full px-4 py-2.5 rounded-xl border border-stone-200 focus:outline-none focus:border-forest-500 text-sm bg-white">
                             </div>
                             <div class="space-y-1.5">
                                 <label for="last-name" class="text-xs font-bold text-stone-500 uppercase tracking-wider">Last Name</label>
-                                <input type="text" id="last-name" required class="w-full px-4 py-2.5 rounded-xl border border-stone-200 focus:outline-none focus:border-forest-500 text-sm">
+                                <input type="text" id="last-name" required class="w-full px-4 py-2.5 rounded-xl border border-stone-200 focus:outline-none focus:border-forest-500 text-sm bg-white">
                             </div>
                         </div>
                         
                         <div class="space-y-1.5">
                             <label for="email" class="text-xs font-bold text-stone-500 uppercase tracking-wider">Email Address</label>
-                            <input type="email" id="email" required class="w-full px-4 py-2.5 rounded-xl border border-stone-200 focus:outline-none focus:border-forest-500 text-sm">
+                            <input type="email" id="email" required class="w-full px-4 py-2.5 rounded-xl border border-stone-200 focus:outline-none focus:border-forest-500 text-sm bg-white">
                         </div>
                         
                         <div class="space-y-1.5">
                             <label for="message" class="text-xs font-bold text-stone-500 uppercase tracking-wider">Message</label>
-                            <textarea id="message" rows="4" required class="w-full px-4 py-2.5 rounded-xl border border-stone-200 focus:outline-none focus:border-forest-500 text-sm"></textarea>
+                            <textarea id="message" rows="4" required class="w-full px-4 py-2.5 rounded-xl border border-stone-200 focus:outline-none focus:border-forest-500 text-sm bg-white"></textarea>
                         </div>
                         
-                        <button type="submit" class="w-full bg-forest-500 hover:bg-forest-600 text-white font-bold py-3 px-6 rounded-xl text-center transition-colors shadow">
+                        <button type="submit" class="w-full bg-forest-500 hover:bg-forest-600 text-brand-50 font-bold py-3.5 px-6 rounded-xl text-center transition-colors shadow">
                             Send Message
                         </button>
                     </form>
@@ -525,27 +654,27 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-forest-700">
                 <!-- Brand -->
-                <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 bg-brand-400 text-stone-900 rounded-full flex items-center justify-center text-sm shadow">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 bg-brand-400 text-stone-900 rounded-lg flex items-center justify-center text-sm shadow">
                         <i class="fa-solid fa-wheat-awn"></i>
                     </div>
                     <div>
                         <span class="font-serif text-xl font-bold tracking-tight text-white">Love Millets</span>
-                        <p class="text-[8px] uppercase tracking-widest font-semibold text-brand-400">Ancient Grains, Modern Life</p>
+                        <p class="text-[8px] uppercase tracking-widest font-bold text-brand-400">Honest Grains. Zero Junk.</p>
                     </div>
                 </div>
                 
                 <!-- Quick links -->
-                <div class="flex flex-wrap justify-center gap-6 text-sm">
+                <div class="flex flex-wrap justify-center gap-6 text-sm font-semibold">
                     <a href="#home" class="hover:text-white transition-colors">Home</a>
-                    <a href="#benefits" class="hover:text-white transition-colors">Benefits</a>
-                    <a href="#products" class="hover:text-white transition-colors">Products</a>
+                    <a href="#truth" class="hover:text-white transition-colors">Honest Truth</a>
+                    <a href="#explorer" class="hover:text-white transition-colors">Explorer</a>
+                    <a href="#products" class="hover:text-white transition-colors">Future Range</a>
                     <a href="#story" class="hover:text-white transition-colors">Our Story</a>
-                    <a href="#contact" class="hover:text-white transition-colors">Contact</a>
                 </div>
             </div>
             
-            <div class="flex flex-col md:flex-row items-center justify-between text-xs text-forest-200/80 gap-4">
+            <div class="flex flex-col md:flex-row items-center justify-between text-xs text-forest-200/60 gap-4">
                 <p>&copy; 2026 Love Millets Startup. All rights reserved.</p>
                 <div class="flex gap-4">
                     <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
@@ -569,7 +698,7 @@
             }
         });
 
-        // Mobile responsive hamburger menu toggle
+        // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = document.getElementById('menu-icon');
@@ -591,6 +720,28 @@
                 menuIcon.className = 'fa-solid fa-bars text-2xl';
             });
         });
+
+        // Millet Explorer tab switching logic
+        function switchMillet(milletId) {
+            // Hide all panels
+            const panels = document.querySelectorAll('.millet-panel');
+            panels.forEach(panel => panel.classList.add('hidden'));
+
+            // Deactivate all buttons
+            const buttons = document.querySelectorAll('.millet-tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-forest-500', 'text-brand-50', 'border-forest-500', 'shadow');
+                btn.classList.add('bg-white', 'text-stone-600', 'border-stone-200');
+            });
+
+            // Show selected panel
+            document.getElementById('panel-' + milletId).classList.remove('hidden');
+
+            // Activate clicked button
+            const activeBtn = document.getElementById('btn-' + milletId);
+            activeBtn.classList.remove('bg-white', 'text-stone-600', 'border-stone-200');
+            activeBtn.classList.add('active', 'bg-forest-500', 'text-brand-50', 'border-forest-500', 'shadow');
+        }
     </script>
 </body>
 </html>
